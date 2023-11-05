@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Heat Index Calculator</title>
+  </head>
+  <body>
+    <div
+      id="container"
+      onselectstart="return false"
+      onpaste="return false"
+      onCopy="return false"
+      onCut="return false"
+      onDrag="return false"
+      onDrop="return false"
+    >
+      <div class="input-box">
+        <h2>Heat Index Calculator</h2>
+        <div id="capt">
+          Fill in the information about the desired climate conditions below and
+          hit "Calculate".
+        </div>
+        <form>
+          <div class="input">
+            <input type="number" name="temp" id="temp" required />
+            <label>Ambient dry-bulb Temperature (°C)</label>
+          </div>
+          <div class="input">
+            <input type="number" name="humid" id="humid" required />
+            <label>Relative Humidity (%)</label>
+          </div>
+          <a href="javascript:void(0)" id="button">
+            <span></span>
+            <span></span>
+            Calculate
+          </a>
+        </form>
+      </div>
+    </div>
+    <div id="snackbar"></div>
+    <div
+      onselectstart="return false"
+      onpaste="return false;"
+      onCopy="return false"
+      onCut="return false"
+      onDrag="return false"
+      onDrop="return false"
+      class="popup"
+      onclick="showPopup()"
+      id="footer"
+    >
+      Sources
+      <label class="popuptext" id="sourcesp"
+        >Formula -
+        <a target="_blank" href="https://en.wikipedia.org/wiki/Heat_index"
+          >Wikipedia.org</a
+        >
+        and
+        <a target="_blank" href="https://www.weather.gov/ama/heatindex"
+          >Weather.gov</a
+        ></label
+      >
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
